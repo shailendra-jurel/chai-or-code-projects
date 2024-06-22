@@ -1,0 +1,1 @@
+text kr rha hu bhai kux nhi hai no tension
