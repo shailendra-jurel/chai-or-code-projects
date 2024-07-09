@@ -2,8 +2,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { useState } from 'react'
+import Card from './components/card'
 
 function App() {
+
+  let myObj = {
+    userName : "shailendar",
+    userAge : 20}
   const [count, setCount] = useState(10)
 
   const addvalue = () => { 
@@ -17,6 +22,13 @@ function App() {
 
   return (
     <>
+    <h1 className='bg-green-500 text-black p-4 rounded-xl'> Tailwind Test</h1>
+    
+
+    <Card channel ="code and relax"  someObj = {myObj} />
+   
+    
+
     <p>{count}</p>
     
     <button onClick={addvalue}> Add Value {count} </button> <br />
