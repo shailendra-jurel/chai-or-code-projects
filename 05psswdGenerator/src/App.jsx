@@ -8,6 +8,7 @@ function App() {
 
   // useRef using
   const passwdRef = useRef(null);
+
   const copyPssedonClip = useCallback(() => {  // how useCallback  optimize the function
     passwdRef.current?.select();
     // passwdRef.current?.setSelectionRange(0, 99999);
@@ -67,6 +68,7 @@ function App() {
               type='checkbox'
               checked={numAllowed}
               id='numberInput'
+              className='cursor-pointer'
               onChange={() => setNumAllowed((prev) => !prev)}
             />
             <label>Numbers</label>
@@ -76,7 +78,8 @@ function App() {
               type='checkbox'
               checked={charAllowed}
               id='charInput'
-              onChange={() => setCharAllowed((prev) => !prev)}
+              className='cursor-pointer'
+              onChange={() => setCharAllowed((p) => !p)}
             />
             <label>Special Characters</label>
           </div>
